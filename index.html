@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peach & Goma - The Cutest Cat Couple</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Pacifico&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: linear-gradient(135deg, #fff5f5 0%, #f0f4ff 100%);
+            opacity: 0.3;
+            z-index: -1;
+        }
+        
+        .main-gif {
+            width: 300px;
+            height: 300px;
+            object-fit: contain;
+            margin-bottom: 3rem;
+            filter: drop-shadow(0 10px 30px rgba(0,0,0,0.1));
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        /* Hero Social Links */
+        .hero-social-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 50%;
+            text-decoration: none;
+            color: #ff9a9e;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 2px solid #ff9a9e;
+        }
+        
+        .social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255,154,158,0.3);
+            background: #ff9a9e;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: #666;
+            text-align: center;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+        
+        .scroll-to-quiz {
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 5px 15px rgba(255,154,158,0.3);
+            margin-bottom: 3rem;
+        }
+        
+        .scroll-to-quiz:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255,154,158,0.4);
+        }
+        
+        .character-buttons {
+            display: flex;
+            gap: 4rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .character-card {
+            text-align: center;
+        }
+        
+        .character-name {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .mini-gif {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+        
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .btn {
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .btn-bonk {
+            background-color: #FFD700;
+            color: #333;
+        }
+        
+        .btn-bonk:hover {
+            background-color: #FFC700;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255,215,0,0.4);
+        }
+        
+        .btn-dex {
+            background-color: #000;
+            color: #fff;
+        }
+        
+        .btn-dex:hover {
+            background-color: #222;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+        
+        /* CA Box */
+        .ca-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: 2rem auto;
+            max-width: 600px;
+            text-align: center;
+            border: 2px solid #ff9a9e;
+        }
+        
+        .ca-label {
+            font-weight: 600;
+            color: #ff9a9e;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .ca-address {
+            background: #f5f5f5;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            font-family: monospace;
+            font-size: 1rem;
+            word-break: break-all;
+            color: #333;
+        }
+        
+        .copy-ca-btn {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255,154,158,0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .copy-ca-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255,154,158,0.4);
+        }
+        
+        .copy-ca-btn.copied {
+            background: #4CAF50;
+            transform: scale(1.05);
+        }
+        
+        /* Floating gifs decoration */
+        .floating-gif {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            opacity: 0.6;
+            animation: floatAround 15s ease-in-out infinite;
+        }
+        
+        .floating-gif:nth-child(1) {
+            top: 10%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+        
+        .floating-gif:nth-child(2) {
+            top: 20%;
+            right: 10%;
+            animation-delay: 3s;
+        }
+        
+        .floating-gif:nth-child(3) {
+            bottom: 15%;
+            left: 8%;
+            animation-delay: 5s;
+        }
+        
+        .floating-gif:nth-child(4) {
+            bottom: 25%;
+            right: 5%;
+            animation-delay: 7s;
+        }
+        
+        @keyframes floatAround {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(20px, -30px) rotate(90deg); }
+            50% { transform: translate(-20px, -50px) rotate(180deg); }
+            75% { transform: translate(-40px, -20px) rotate(270deg); }
+        }
+        
+        /* Personality Section */
+        .personality-section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fafafa;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .personality-title {
+            font-family: 'Pacifico', cursive;
+            font-size: 3rem;
+            text-align: center;
+            color: #ff9a9e;
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .title-gif {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+        
+        .personalities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+        
+        .personality-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .personality-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,154,158,0.05) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(0.8); opacity: 0.5; }
+            50% { transform: scale(1); opacity: 1; }
+        }
+        
+        .personality-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .personality-card h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .peach-card h3 {
+            color: #ff9a9e;
+        }
+        
+        .goma-card h3 {
+            color: #8e8e93;
+        }
+        
+        .personality-card p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #666;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cute-text {
+            font-family: 'Pacifico', cursive;
+            font-size: 1.4rem;
+            text-align: center;
+            color: #ff9a9e;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(255,154,158,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        /* Quiz Section */
+        .quiz-section {
+            padding: 5rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .quiz-title {
+            font-family: 'Pacifico', cursive;
+            font-size: 3rem;
+            text-align: center;
+            color: #ff9a9e;
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .question {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .question h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .question-gif {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+        
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .option {
+            display: block;
+            width: 100%;
+        }
+        
+        .option label {
+            display: block;
+            padding: 1rem 1.5rem;
+            border: 2px solid #eee;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .option label:hover {
+            border-color: #ff9a9e;
+            background: #fff5f5;
+        }
+        
+        .option input[type="radio"] {
+            display: none;
+        }
+        
+        .option input[type="radio"]:checked + label {
+            background: #ff9a9e;
+            color: white;
+            border-color: #ff9a9e;
+        }
+        
+        .submit-quiz {
+            display: block;
+            margin: 3rem auto 0;
+            padding: 1.5rem 3rem;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255,154,158,0.3);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            justify-content: center;
+        }
+        
+        .submit-quiz:hover:not(:disabled) {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255,154,158,0.4);
+        }
+        
+        .submit-quiz:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        /* Gallery Section */
+        .gallery-section {
+            padding: 5rem 2rem;
+            background: #fafafa;
+            position: relative;
+        }
+        
+        .gallery-title {
+            font-family: 'Pacifico', cursive;
+            font-size: 3rem;
+            text-align: center;
+            color: #ff9a9e;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .instagram-link {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .instagram-link a {
+            color: #8e8e93;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .instagram-link a:hover {
+            color: #ff9a9e;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            aspect-ratio: 1;
+            background: #f5f5f5;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+            padding: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        .gallery-overlay p {
+            color: white;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        /* Result Section */
+        .result {
+            display: none;
+            text-align: center;
+            padding: 3rem;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-top: 3rem;
+        }
+        
+        .result h2 {
+            font-family: 'Pacifico', cursive;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .result-peach h2 {
+            color: #ff9a9e;
+        }
+        
+        .result-goma h2 {
+            color: #8e8e93;
+        }
+        
+        .result-gif {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            margin: 2rem 0;
+        }
+        
+        .ca-display {
+            background: #f5f5f5;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            font-family: monospace;
+            font-size: 1.1rem;
+            word-break: break-all;
+        }
+        
+        .ca-label {
+            font-weight: 600;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Share Section */
+        .share-section {
+            margin: 2rem 0;
+        }
+        
+        .copy-btn {
+            display: block;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255,154,158,0.3);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+        
+        .copy-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255,154,158,0.4);
+        }
+        
+        .copy-btn.copied {
+            background: #4CAF50;
+            transform: scale(1.05);
+        }
+        
+        .copy-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Result Content Styling */
+        .result-content {
+            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 3px solid #ff9a9e;
+            min-height: 400px;
+            min-width: 400px;
+            position: relative;
+        }
+        
+        .result-traits {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+        
+        .trait-tag {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        /* Footer */
+        .footer {
+            background: white;
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+            border-top: 1px solid #eee;
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .footer-logo {
+            font-family: 'Pacifico', cursive;
+            font-size: 2rem;
+            color: #ff9a9e;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .footer-logo .mini-gif {
+            width: 30px;
+            height: 30px;
+        }
+        
+        .footer-text {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: #8e8e93;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #ff9a9e;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #eee;
+            padding-top: 1.5rem;
+            color: #999;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .character-buttons {
+                gap: 2rem;
+            }
+            
+            .personality-title, .quiz-title, .gallery-title {
+                font-size: 2rem;
+            }
+            
+            .main-gif {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .floating-gif {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 1rem;
+            }
+            
+            .footer-links {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="gifs/peach3.gif" class="floating-gif" alt="">
+        <img src="gifs/goma2.gif" class="floating-gif" alt="">
+        <img src="gifs/peach2.gif" class="floating-gif" alt="">
+        <img src="gifs/goma3.gif" class="floating-gif" alt="">
+        
+        <img src="gifs/peachgoma1.gif" alt="Peach and Goma" class="main-gif">
+        
+        <!-- Social Links under main image -->
+        <div class="hero-social-links">
+            <a href="#" class="social-link">
+                <span style="font-size: 1.5rem;">𝕏</span>
+            </a>
+            <a href="#" class="social-link">
+                <span style="font-size: 1.5rem;">👥</span>
+            </a>
+        </div>
+        
+        <h1>Peach & Goma</h1>
+        
+        <p class="hero-subtitle">
+            Take our personality quiz to discover your inner cat spirit and join the Peach & Goma community! 
+            Find out your personality type and share your results with friends.
+        </p>
+        
+        <a href="#quiz" class="scroll-to-quiz">
+            <img src="gifs/peachgoma2.gif" class="mini-gif" alt="">
+            Take the Personality Quiz
+        </a>
+        
+        <!-- Contract Address Box -->
+        <div class="ca-box">
+            <div class="ca-label">Contract Address (CA)</div>
+            <div class="ca-address" id="ca-address">.........................................bonk</div>
+            <button class="copy-ca-btn" id="copy-ca-btn">
+                <img src="gifs/peachgoma2.gif" class="mini-gif" alt="">
+                Copy CA
+            </button>
+        </div>
+        
+        <div class="character-buttons">
+            <div class="character-card">
+                <h2 class="character-name">Peach & Goma<img src="gifs/peachgoma1.gif" class="mini-gif" alt=""></h2>
+                <div class="button-group">
+                    <a href="#" class="btn btn-bonk">Buy on Bonk</a>
+                    <a href="#" class="btn btn-dex">View on DEX</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Personality Section -->
+    <section class="personality-section">
+        <h2 class="personality-title">
+            <img src="gifs/peachgoma3.gif" class="title-gif" alt="">
+            Meet Our Adorable Cat Couple!
+            <img src="gifs/peachgoma3.gif" class="title-gif" alt="">
+        </h2>
+        
+        <div class="personalities">
+            <div class="personality-card peach-card">
+                <h3>Peach</h3>
+                <p>
+                    Our fluffy white princess! Peach is the embodiment of playfulness and mischief. 
+                    With her large, expressive eyes that sparkle with curiosity, she brings warmth 
+                    and joy to everyone around her. Her energetic personality means she's always 
+                    ready for an adventure, whether it's chasing butterflies or surprising Goma 
+                    with her affectionate antics. Despite her mischievous side, Peach has a heart 
+                    full of love and never misses a chance to show it!
+                </p>
+            </div>
+            
+            <div class="personality-card goma-card">
+                <h3>Goma</h3>
+                <p>
+                    The calm and collected gray gentleman! Goma is the perfect balance to Peach's 
+                    energetic nature. With his gentle demeanor and nurturing personality, he's 
+                    always there to support and care for Peach. His patient and understanding 
+                    nature makes him the rock of their relationship. Whether it's sharing a 
+                    quiet moment or playfully responding to Peach's energy, Goma shows that 
+                    true strength lies in gentleness and unconditional love.
+                </p>
+            </div>
+        </div>
+        
+        <div class="cute-text">
+            <img src="gifs/peach4.gif" class="title-gif" alt="">
+            Together, Peach and Goma represent the perfect harmony of opposites - 
+            energy and calm, playfulness and patience, creating a beautiful story 
+            of love and companionship that touches hearts worldwide!
+            <img src="gifs/peach4.gif" class="title-gif" alt="">
+        </div>
+    </section>
+    
+    <!-- Quiz Section -->
+    <section class="quiz-section" id="quiz">
+        <h2 class="quiz-title">
+            <img src="gifs/peach5.gif" class="title-gif" alt="">
+            What's Your Cat Personality?
+            <img src="gifs/goma6.gif" class="title-gif" alt="">
+        </h2>
+        
+        <form id="personality-quiz">
+            <div class="question">
+                <h3><img src="gifs/peach7.gif" class="question-gif" alt=""> 1. How do you prefer to spend your weekend?</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q1" value="adventurous" id="q1-a">
+                        <label for="q1-a">Going on spontaneous adventures and trying new activities</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q1" value="social" id="q1-b">
+                        <label for="q1-b">Hanging out with friends and meeting new people</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q1" value="peaceful" id="q1-c">
+                        <label for="q1-c">Relaxing at home with a good book or movie</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q1" value="creative" id="q1-d">
+                        <label for="q1-d">Working on creative projects or hobbies</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <h3><img src="gifs/goma7.gif" class="question-gif" alt=""> 2. In a group setting, you typically...</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q2" value="leader" id="q2-a">
+                        <label for="q2-a">Take charge and lead the conversation</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q2" value="supporter" id="q2-b">
+                        <label for="q2-b">Support others and make sure everyone feels included</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q2" value="observer" id="q2-c">
+                        <label for="q2-c">Listen carefully and contribute thoughtful insights</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q2" value="entertainer" id="q2-d">
+                        <label for="q2-d">Keep everyone laughing and lighten the mood</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <h3><img src="gifs/peach8.gif" class="question-gif" alt=""> 3. When making important decisions, you...</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q3" value="intuitive" id="q3-a">
+                        <label for="q3-a">Trust your gut feeling and go with instinct</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q3" value="analytical" id="q3-b">
+                        <label for="q3-b">Research thoroughly and weigh all options</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q3" value="collaborative" id="q3-c">
+                        <label for="q3-c">Seek advice from trusted friends and family</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q3" value="spontaneous" id="q3-d">
+                        <label for="q3-d">Make quick decisions and adapt as you go</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <h3><img src="gifs/goma5.gif" class="question-gif" alt=""> 4. Your ideal way to show affection is...</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q4" value="physical" id="q4-a">
+                        <label for="q4-a">Hugs, cuddles, and physical closeness</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q4" value="words" id="q4-b">
+                        <label for="q4-b">Sweet words and verbal expressions of love</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q4" value="actions" id="q4-c">
+                        <label for="q4-c">Doing helpful things and acts of service</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q4" value="gifts" id="q4-d">
+                        <label for="q4-d">Thoughtful gifts and surprises</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <h3><img src="gifs/peach9.gif" class="question-gif" alt=""> 5. When you're stressed, you prefer to...</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q5" value="active" id="q5-a">
+                        <label for="q5-a">Do something active or exercise it out</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q5" value="social" id="q5-b">
+                        <label for="q5-b">Talk it out with friends or family</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q5" value="solitary" id="q5-c">
+                        <label for="q5-c">Spend time alone to process and recharge</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q5" value="creative" id="q5-d">
+                        <label for="q5-d">Express yourself through art, music, or writing</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <h3><img src="gifs/peach10.gif" class="question-gif" alt=""> 6. Your communication style is typically...</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q6" value="direct" id="q6-a">
+                        <label for="q6-a">Direct and straightforward</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q6" value="gentle" id="q6-b">
+                        <label for="q6-b">Gentle and considerate of others' feelings</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q6" value="enthusiastic" id="q6-c">
+                        <label for="q6-c">Enthusiastic and animated</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q6" value="thoughtful" id="q6-d">
+                        <label for="q6-d">Thoughtful and measured</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <h3><img src="gifs/goma2.gif" class="question-gif" alt=""> 7. What motivates you most?</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q7" value="achievement" id="q7-a">
+                        <label for="q7-a">Achieving goals and personal success</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q7" value="harmony" id="q7-b">
+                        <label for="q7-b">Creating harmony and helping others</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q7" value="experience" id="q7-c">
+                        <label for="q7-c">New experiences and adventures</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q7" value="stability" id="q7-d">
+                        <label for="q7-d">Stability and security for yourself and loved ones</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <h3><img src="gifs/peach3.gif" class="question-gif" alt=""> 8. In your free time, you're most likely to...</h3>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="q8" value="explore" id="q8-a">
+                        <label for="q8-a">Explore new places or try new restaurants</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q8" value="connect" id="q8-b">
+                        <label for="q8-b">Spend quality time with loved ones</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q8" value="learn" id="q8-c">
+                        <label for="q8-c">Learn something new or work on self-improvement</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q8" value="recharge" id="q8-d">
+                        <label for="q8-d">Recharge with peaceful, solitary activities</label>
+                    </div>
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-quiz" disabled>
+                <img src="gifs/peach11.gif" class="mini-gif" alt="">
+                Discover Your Cat Personality!
+                <img src="gifs/goma9.gif" class="mini-gif" alt="">
+            </button>
+        </form>
+        
+        <!-- Result Section -->
+        <div id="quiz-result" class="result">
+            <div id="result-content" class="result-content">
+                <h2 id="result-title" class="result-title">
+                    <img id="result-gif-left" src="" class="title-gif" alt="">
+                    <span id="result-text"></span>
+                    <img id="result-gif-right" src="" class="title-gif" alt="">
+                </h2>
+                <img id="result-main-gif" src="" alt="" class="result-gif">
+                <p id="result-description" style="font-size: 1.3rem; margin-bottom: 2rem;"></p>
+                <div id="result-traits" class="result-traits"></div>
+            </div>
+            
+            <div class="share-section">
+                <div class="copy-buttons">
+                    <button id="share-x" class="copy-btn">
+                        <span style="font-size: 1.2rem;">𝕏</span>
+                        Share in X Community
+                    </button>
+                    <button id="try-again" class="copy-btn" style="background: linear-gradient(135deg, #6c757d 0%, #adb5bd 100%);">
+                        <img src="gifs/peachgoma3.gif" class="mini-gif" alt="">
+                        Try Again
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <h2 class="gallery-title">
+            <img src="gifs/peachgoma4.gif" class="title-gif" alt="">
+            Gallery of Love
+            <img src="gifs/peachgoma5.gif" class="title-gif" alt="">
+        </h2>
+        <div class="instagram-link">
+            <a href="https://www.instagram.com/mochi.mochipeachcat/?hl=en" target="_blank">@mochi.mochipeachcat</a>
+        </div>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="gifs/peachgoma1.gif" alt="Peach and Goma together">
+                <div class="gallery-overlay">
+                    <p>Cuddle time!</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="gifs/peachgoma2.gif" alt="Peach and Goma playing">
+                <div class="gallery-overlay">
+                    <p>Playful moments</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="gifs/peachgoma3.gif" alt="Sweet couple moments">
+                <div class="gallery-overlay">
+                    <p>Sweet together</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="gifs/peach2.gif" alt="Peach adventures">
+                <div class="gallery-overlay">
+                    <p>Peach's adventures</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="gifs/goma1.gif" alt="Goma resting">
+                <div class="gallery-overlay">
+                    <p>Goma's peaceful moment</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="gifs/peach3.gif" alt="Peach being playful">
+                <div class="gallery-overlay">
+                    <p>Peach being playful</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="gifs/goma2.gif" alt="Goma's calm moments">
+                <div class="gallery-overlay">
+                    <p>Goma being gentle</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="gifs/peach5.gif" alt="Peach expressions">
+                <div class="gallery-overlay">
+                    <p>Peach's expressions</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="gifs/goma3.gif" alt="Goma expressions">
+                <div class="gallery-overlay">
+                    <p>Goma's expressions</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="gifs/peachgoma4.gif" alt="Heart moments">
+                <div class="gallery-overlay">
+                    <p>Love is in the air</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="gifs/peachgoma5.gif" alt="Happy times">
+                <div class="gallery-overlay">
+                    <p>Pure happiness</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="gifs/peachgoma1.gif" class="mini-gif" alt="">
+                Peach & Goma
+                <img src="gifs/peachgoma1.gif" class="mini-gif" alt="">
+            </div>
+            <p class="footer-text">
+                Spreading love and joy through the adorable adventures of our favorite cat couple. 
+                Created with love by Bu Jue Xiao Xiao, bringing smiles to hearts worldwide since 2017.
+            </p>
+            <div class="footer-links">
+                <a href="#" target="_blank">
+                    <span style="font-size: 1.2rem;">𝕏</span> X/Twitter
+                </a>
+                <a href="#" target="_blank">
+                    <span style="font-size: 1.2rem;">👥</span> Community
+                </a>
+                <a href="#quiz">Take Quiz</a>
+                <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Back to Top</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Peach & Goma. All gifs and characters created by Bu Jue Xiao Xiao.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Personality types with detailed descriptions
+        const personalityTypes = {
+            'adventurous-explorer': {
+                title: 'The Adventurous Explorer',
+                gif: 'peach11.gif',
+                leftGif: 'peach12.gif',
+                rightGif: 'peach12.gif',
+                description: 'Like Peach on her wildest adventures! You\'re spontaneous, curious, and always ready for the next exciting experience. Your enthusiasm is contagious and you inspire others to step out of their comfort zones.',
+                traits: ['Spontaneous', 'Curious', 'Energetic', 'Inspiring'],
+                team: 'Team Peach',
+                category: 'peach'
+            },
+            'social-butterfly': {
+                title: 'The Social Butterfly',
+                gif: 'peach5.gif',
+                leftGif: 'peach10.gif',
+                rightGif: 'peach10.gif',
+                description: 'You embody Peach\'s loving and social nature! You thrive in groups, bring people together, and have a natural ability to make everyone feel welcome and loved.',
+                traits: ['Sociable', 'Caring', 'Inclusive', 'Warm-hearted'],
+                team: 'Team Peach',
+                category: 'peach'
+            },
+            'peaceful-soul': {
+                title: 'The Peaceful Soul',
+                gif: 'goma1.gif',
+                leftGif: 'goma4.gif',
+                rightGif: 'goma4.gif',
+                description: 'Just like Goma\'s calm and gentle spirit! You find beauty in quiet moments, value inner peace, and provide a soothing presence that others gravitate toward.',
+                traits: ['Calm', 'Reflective', 'Peaceful', 'Wise'],
+                team: 'Team Goma',
+                category: 'goma'
+            },
+            'creative-heart': {
+                title: 'The Creative Heart',
+                gif: 'peach3.gif',
+                leftGif: 'peach8.gif',
+                rightGif: 'peach8.gif',
+                description: 'You channel Peach\'s playful creativity! You see the world through an artistic lens, express yourself uniquely, and bring beauty and innovation to everything you touch.',
+                traits: ['Creative', 'Expressive', 'Imaginative', 'Unique'],
+                team: 'Team Peach',
+                category: 'peach'
+            },
+            'gentle-supporter': {
+                title: 'The Gentle Supporter',
+                gif: 'goma2.gif',
+                leftGif: 'goma6.gif',
+                rightGif: 'goma6.gif',
+                description: 'Like Goma\'s nurturing nature! You\'re the friend everyone turns to, offering steady support, thoughtful advice, and unconditional love to those around you.',
+                traits: ['Supportive', 'Reliable', 'Nurturing', 'Loyal'],
+                team: 'Team Goma',
+                category: 'goma'
+            },
+            'balanced-harmony': {
+                title: 'The Balanced Harmony',
+                gif: 'peachgoma1.gif',
+                leftGif: 'peachgoma4.gif',
+                rightGif: 'peachgoma5.gif',
+                description: 'You perfectly embody both Peach and Goma! You balance energy with calm, playfulness with wisdom, creating harmony wherever you go. You\'re the perfect blend of both personalities.',
+                traits: ['Balanced', 'Harmonious', 'Adaptable', 'Complete'],
+                team: 'Team Peach & Goma',
+                category: 'peachgoma'
+            }
+        };
+
+        // Form validation - enable submit only when all questions are answered
+        function checkFormCompletion() {
+            const totalQuestions = 8;
+            let answeredQuestions = 0;
+            
+            for (let i = 1; i <= totalQuestions; i++) {
+                const questionAnswered = document.querySelector(`input[name="q${i}"]:checked`);
+                if (questionAnswered) {
+                    answeredQuestions++;
+                }
+            }
+            
+            const submitButton = document.querySelector('.submit-quiz');
+            submitButton.disabled = answeredQuestions !== totalQuestions;
+        }
+        
+        // Add event listeners to all radio buttons
+        document.querySelectorAll('input[type="radio"]').forEach(radio => {
+            radio.addEventListener('change', checkFormCompletion);
+        });
+        
+        // Smooth scroll for quiz button
+        document.querySelector('.scroll-to-quiz').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('quiz').scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+        
+                 // Calculate personality type with improved logic
+         function calculatePersonality(answers) {
+             const personalityScores = {
+                 'adventurous-explorer': 0,
+                 'social-butterfly': 0,
+                 'peaceful-soul': 0,
+                 'creative-heart': 0,
+                 'gentle-supporter': 0,
+                 'balanced-harmony': 0
+             };
+             
+             // More specific trait mapping for each question
+             answers.forEach((answer, index) => {
+                 const value = answer.value;
+                 
+                 switch(index) {
+                     case 0: // Weekend preference
+                         if (value === 'adventurous') personalityScores['adventurous-explorer'] += 3;
+                         if (value === 'social') personalityScores['social-butterfly'] += 3;
+                         if (value === 'peaceful') personalityScores['peaceful-soul'] += 3;
+                         if (value === 'creative') personalityScores['creative-heart'] += 3;
+                         break;
+                     case 1: // Group behavior
+                         if (value === 'leader') personalityScores['adventurous-explorer'] += 2;
+                         if (value === 'supporter') personalityScores['gentle-supporter'] += 3;
+                         if (value === 'observer') personalityScores['peaceful-soul'] += 2;
+                         if (value === 'entertainer') personalityScores['social-butterfly'] += 3;
+                         break;
+                     case 2: // Decision making
+                         if (value === 'intuitive') personalityScores['adventurous-explorer'] += 2;
+                         if (value === 'analytical') personalityScores['peaceful-soul'] += 2;
+                         if (value === 'collaborative') personalityScores['gentle-supporter'] += 2;
+                         if (value === 'spontaneous') personalityScores['social-butterfly'] += 2;
+                         break;
+                     case 3: // Affection style
+                         if (value === 'physical') personalityScores['social-butterfly'] += 2;
+                         if (value === 'words') personalityScores['creative-heart'] += 2;
+                         if (value === 'actions') personalityScores['gentle-supporter'] += 3;
+                         if (value === 'gifts') personalityScores['creative-heart'] += 1;
+                         break;
+                     case 4: // Stress response
+                         if (value === 'active') personalityScores['adventurous-explorer'] += 2;
+                         if (value === 'social') personalityScores['social-butterfly'] += 2;
+                         if (value === 'solitary') personalityScores['peaceful-soul'] += 3;
+                         if (value === 'creative') personalityScores['creative-heart'] += 3;
+                         break;
+                     case 5: // Communication style
+                         if (value === 'direct') personalityScores['adventurous-explorer'] += 2;
+                         if (value === 'gentle') personalityScores['gentle-supporter'] += 2;
+                         if (value === 'enthusiastic') personalityScores['social-butterfly'] += 2;
+                         if (value === 'thoughtful') personalityScores['peaceful-soul'] += 2;
+                         break;
+                     case 6: // Motivation
+                         if (value === 'achievement') personalityScores['adventurous-explorer'] += 2;
+                         if (value === 'harmony') personalityScores['gentle-supporter'] += 2;
+                         if (value === 'experience') personalityScores['social-butterfly'] += 2;
+                         if (value === 'stability') personalityScores['peaceful-soul'] += 2;
+                         break;
+                     case 7: // Free time
+                         if (value === 'explore') personalityScores['adventurous-explorer'] += 2;
+                         if (value === 'connect') personalityScores['social-butterfly'] += 2;
+                         if (value === 'learn') personalityScores['creative-heart'] += 2;
+                         if (value === 'recharge') personalityScores['peaceful-soul'] += 2;
+                         break;
+                 }
+             });
+             
+             // Check for balanced personality (if scores are close)
+             const scores = Object.values(personalityScores);
+             const maxScore = Math.max(...scores);
+             const highScores = scores.filter(score => score >= maxScore - 2);
+             
+             // If multiple personalities are close, it's balanced
+             if (highScores.length >= 3 && maxScore <= 8) {
+                 personalityScores['balanced-harmony'] = maxScore + 1;
+             }
+             
+             // Return the personality with highest score
+             return Object.keys(personalityScores).reduce((a, b) => 
+                 personalityScores[a] > personalityScores[b] ? a : b
+             );
+         }
+        
+        // Quiz submission
+        document.getElementById('personality-quiz').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const answers = document.querySelectorAll('input[type="radio"]:checked');
+            const personalityType = calculatePersonality(answers);
+            const personality = personalityTypes[personalityType];
+            
+                         // Update result display
+             document.getElementById('result-text').textContent = personality.title;
+             document.getElementById('result-gif-left').src = `gifs/${personality.leftGif}`;
+             document.getElementById('result-gif-right').src = `gifs/${personality.rightGif}`;
+             document.getElementById('result-main-gif').src = `gifs/${personality.gif}`;
+             document.getElementById('result-description').textContent = personality.description;
+             
+             // Add trait tags
+             const traitsContainer = document.getElementById('result-traits');
+             traitsContainer.innerHTML = '';
+             personality.traits.forEach(trait => {
+                 const traitTag = document.createElement('span');
+                 traitTag.className = 'trait-tag';
+                 traitTag.textContent = trait;
+                 traitsContainer.appendChild(traitTag);
+             });
+            
+            
+             
+             // Store current personality type for graphic copying
+             window.currentPersonalityType = personalityType;
+             
+             // Show result and scroll to it
+             document.getElementById('quiz-result').style.display = 'block';
+             document.getElementById('quiz-result').scrollIntoView({ behavior: 'smooth' });
+        });
+        
+
+        
+                 // Copy CA functionality
+         document.getElementById('copy-ca-btn').addEventListener('click', async function() {
+             const button = this;
+             const originalHTML = button.innerHTML;
+             const caAddress = document.getElementById('ca-address').textContent;
+             
+             try {
+                 await navigator.clipboard.writeText(caAddress);
+                 
+                 // Success feedback
+                 button.classList.add('copied');
+                 button.innerHTML = '<img src="gifs/peachgoma2.gif" class="mini-gif" alt=""> Copied!';
+                 
+                 setTimeout(() => {
+                     button.classList.remove('copied');
+                     button.innerHTML = originalHTML;
+                 }, 2000);
+                 
+             } catch (error) {
+                 console.error('Failed to copy CA:', error);
+                 button.innerHTML = '<img src="gifs/peachgoma3.gif" class="mini-gif" alt=""> Failed';
+                 setTimeout(() => {
+                     button.innerHTML = originalHTML;
+                 }, 2000);
+             }
+         });
+         
+         // Share in X Community functionality
+         document.getElementById('share-x').addEventListener('click', function() {
+             const personalityType = window.currentPersonalityType;
+             const personality = personalityTypes[personalityType];
+             
+             const shareText = `I just took the Peach & Goma personality quiz and I'm ${personality.team}! 🐱\n\nMy personality type: ${personality.title}\nTraits: ${personality.traits.join(', ')}\n\n#PeachAndGoma #PersonalityQuiz`;
+             
+             // Create Twitter share URL
+             const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`;
+             window.open(twitterUrl, '_blank');
+         });
+         
+         // Try Again functionality
+         document.getElementById('try-again').addEventListener('click', function() {
+             // Reset the quiz
+             document.getElementById('personality-quiz').reset();
+             document.getElementById('quiz-result').style.display = 'none';
+             
+             // Scroll back to quiz
+             document.getElementById('quiz').scrollIntoView({ behavior: 'smooth' });
+             
+             // Reset submit button
+             document.querySelector('.submit-quiz').disabled = true;
+         });
+        
+        
+    </script>
+</body>
+</html> 
